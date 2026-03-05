@@ -1,0 +1,111 @@
+/* dashboard.module.css */
+.shell { min-height: 100vh; background: #0D0D0D; font-family: 'Barlow Condensed', sans-serif; color: #F5F0E8; }
+
+.nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 24px; background: #111; border-bottom: 1px solid #1e1e1e;
+  position: sticky; top: 0; z-index: 100;
+}
+.navBrand { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 5px; color: #FF5E1A; }
+.navRight { display: flex; align-items: center; gap: 10px; }
+.avatar {
+  width: 34px; height: 34px; border-radius: 50%; background: #FF5E1A;
+  color: #000; font-family: 'Bebas Neue', sans-serif; font-size: 16px; letter-spacing: 1px;
+  display: flex; align-items: center; justify-content: center;
+}
+.navName { font-size: 14px; letter-spacing: 1px; color: #888; }
+.signOutBtn {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 12px; letter-spacing: 2px;
+  padding: 5px 12px; background: none; border: 1px solid #333; color: #666;
+  border-radius: 3px; cursor: pointer;
+}
+.signOutBtn:hover { border-color: #FF5E1A; color: #FF5E1A; }
+
+.welcome { padding: 24px 24px 0; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; }
+.welcomeH { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 4px; }
+.welcomeDate { font-size: 12px; letter-spacing: 2px; color: #666; margin-top: 2px; }
+.quickLinks { display: flex; gap: 8px; flex-wrap: wrap; }
+.quickBtn {
+  font-family: 'Bebas Neue', sans-serif; font-size: 14px; letter-spacing: 2px;
+  padding: 8px 16px; background: #1E1E1E; border: 1px solid #333;
+  color: #F5F0E8; border-radius: 4px; cursor: pointer; text-decoration: none; transition: all .2s;
+}
+.quickBtn:hover { border-color: #FF5E1A; }
+
+.grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px; padding: 20px 24px;
+}
+.card { background: #161616; border: 1px solid #1e1e1e; border-radius: 8px; padding: 16px; }
+.cardWide { grid-column: 1 / -1; }
+.cardHead { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.cardTitle { font-family: 'Bebas Neue', sans-serif; font-size: 15px; letter-spacing: 3px; color: #888; }
+.badge {
+  font-size: 9px; letter-spacing: 3px; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 10px;
+  background: #1E1E1E; color: #555; border: 1px solid #2a2a2a;
+}
+.badgeLive { background: rgba(0,230,118,.1); color: #00e676; border-color: rgba(0,230,118,.3); animation: livePulse 2s ease-in-out infinite; }
+@keyframes livePulse { 0%,100% { opacity: 1; } 50% { opacity: .6; } }
+.noGame { font-size: 13px; color: #555; letter-spacing: 1px; }
+.noGame a { color: #FF5E1A; }
+.empty { font-size: 12px; color: #444; letter-spacing: 1px; }
+.empty a { color: #FF5E1A; }
+
+.liveScore { display: flex; align-items: center; justify-content: center; gap: 24px; padding: 8px 0; }
+.liveTeam { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.liveTeamName { font-family: 'Bebas Neue', sans-serif; font-size: 16px; letter-spacing: 3px; }
+.liveScoreNum { font-family: 'Bebas Neue', sans-serif; font-size: 56px; line-height: 1; }
+.liveMid { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.liveClock { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: #aaa; }
+.livePeriod { font-size: 10px; letter-spacing: 3px; color: #555; text-transform: uppercase; }
+
+.statTabs { display: flex; gap: 4px; }
+.statTab {
+  font-family: 'Bebas Neue', sans-serif; font-size: 12px; letter-spacing: 2px;
+  padding: 3px 8px; background: none; border: 1px solid #2a2a2a; color: #555;
+  border-radius: 3px; cursor: pointer;
+}
+.statTabActive { border-color: #FF5E1A; color: #FF5E1A; }
+.leaderRow { display: flex; align-items: center; gap: 8px; padding: 5px 0; border-bottom: 1px solid #1a1a1a; }
+.leaderRank { font-family: 'Bebas Neue', sans-serif; font-size: 16px; color: #444; width: 18px; }
+.leaderName { flex: 1; font-size: 14px; letter-spacing: 1px; }
+.leaderVal { font-family: 'Bebas Neue', sans-serif; font-size: 20px; color: #FF5E1A; }
+
+.miniTable { width: 100%; border-collapse: collapse; font-size: 13px; }
+.miniTable th { font-size: 9px; letter-spacing: 2px; color: #555; text-align: center; padding: 4px 6px; border-bottom: 1px solid #1e1e1e; }
+.miniTable td { text-align: center; padding: 6px 6px; border-bottom: 1px solid #1a1a1a; font-size: 13px; }
+.miniTable td:first-child { text-align: left; }
+
+.rosterChips { display: flex; flex-wrap: wrap; gap: 5px; }
+.chip {
+  font-size: 12px; letter-spacing: 1px; padding: 4px 10px;
+  background: #1E1E1E; border: 1px solid #333; border-radius: 12px;
+}
+
+.recentGame { display: flex; align-items: center; gap: 10px; padding: 6px 0; border-bottom: 1px solid #1a1a1a; font-size: 13px; }
+.recentDate { font-size: 10px; letter-spacing: 1px; color: #555; min-width: 70px; }
+.recentTeams { flex: 1; letter-spacing: .5px; }
+
+.scheduleForm { display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
+.schedInput {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 1px;
+  background: #1E1E1E; border: 1px solid #333; color: #F5F0E8;
+  padding: 7px 10px; border-radius: 4px; outline: none; flex: 1; min-width: 120px;
+}
+.schedInput:focus { border-color: #FF5E1A; }
+.addGameBtn {
+  font-family: 'Bebas Neue', sans-serif; font-size: 13px; letter-spacing: 1px;
+  padding: 7px 14px; background: #FF5E1A; border: none; color: #000; border-radius: 4px; cursor: pointer;
+}
+.schedItem { display: flex; align-items: center; gap: 8px; padding: 5px 0; border-bottom: 1px solid #1a1a1a; font-size: 13px; }
+.schedDate { font-size: 10px; letter-spacing: 1px; color: #555; min-width: 50px; }
+.schedTeams { flex: 1; }
+.delUpcoming { background: none; border: none; color: #444; cursor: pointer; font-size: 11px; }
+.delUpcoming:hover { color: #ff4444; }
+
+@media (max-width: 600px) {
+  .welcome { flex-direction: column; padding: 16px 16px 0; }
+  .grid { padding: 12px 16px; grid-template-columns: 1fr; }
+  .cardWide { grid-column: 1; }
+}
